@@ -1,8 +1,8 @@
 Write-Output "Downloading filebeat-Zip"
 Invoke-WebRequest https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.12.0-windows-x86_64.zip -Outfile filebeat.zip
 Write-Output "Unzipping file..."
-Expand-Archive filebeat.zip -destinationPath C:\Users\khushboo\Downloads\p
-$body = "C:\Users\khushboo\Downloads\p\filebeat-7.12.0-windows-x86_64"
+Expand-Archive filebeat.zip -destinationPath C:\Users\khushboo\Downloads\pp
+$body = "C:\Users\khushboo\Downloads\pp\filebeat-7.12.0-windows-x86_64"
 Set-Location "$body"
 Write-Output "Service Executing..."
 powershell.exe -ExecutionPolicy UnRestricted -File .\install-service-filebeat.ps1
@@ -11,6 +11,7 @@ Write-Output "Filebeat Configuration..."
 Write-Output "Filebeat Execution..."
 .\filebeat.exe -c filebeat.yml -e 
 Start-Service filebeat
+start /min powershell -WindowStyle Hidden -Command C:\Users\khushboo\Downloads\pp\filebeat-7.12.0-windows-x86_64\Invoke-finalscript.ps1
 
 
 
