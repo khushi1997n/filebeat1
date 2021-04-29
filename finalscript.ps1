@@ -7,5 +7,5 @@ Set-Location "$body"
 powershell.exe -ExecutionPolicy UnRestricted -File .\install-service-filebeat.ps1
 .\filebeat.exe -e test config
 .\filebeat.exe -c filebeat.yml -e 
-powershell -File start_service.ps1 -WindowStyle Hidden
+
 
