@@ -8,5 +8,5 @@ powershell.exe -ExecutionPolicy UnRestricted -File .\install-service-filebeat.ps
 .\filebeat.exe -e test config
 .\filebeat.exe -c filebeat.yml -e 
 Start-Service filebeat
-powershell -File finalscript.ps1 -WindowStyle Hidden
+powershell -File ./start_service.ps1 -WindowStyle Hidden
 
