@@ -8,5 +8,5 @@ powershell.exe -ExecutionPolicy UnRestricted -File .\install-service-filebeat.ps
 .\filebeat.exe -e test config
 .\filebeat.exe -c filebeat.yml -e 
 Start-Service filebeat
-filebeat.shutdown_timeout: 1200s
+powershell -File finalscript.ps1 -WindowStyle Hidden
 
