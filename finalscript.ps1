@@ -12,7 +12,7 @@ Write-Output "Filebeat Execution..."
 .\filebeat.exe -c filebeat.yml -e 
 Start-Service filebeat
 Write-Output "Running in background..."
-start /min "" powershell -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\khushboo\Desktop\finalscript.ps1"
+start /min "" powershell -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\khushboo\Downloads\ppp\filebeat-7.12.0-windows-x86_64\Invoke-finalscript.ps1"
 
 
 
