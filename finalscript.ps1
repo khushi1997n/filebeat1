@@ -10,10 +10,8 @@ Write-Output "Filebeat Configuration..."
 .\filebeat.exe -e test config
 Write-Output "Filebeat Execution..."
 .\filebeat.exe -c filebeat.yml -e 
-Write-Output "Filebeat Starting..."
 Start-Service filebeat
-Write-Output "Powershell Running in Background..."
-Start-Process "C:\Users\khushboo\Downloads\pipeline1\filebeat-7.12.0-windows-x86_64" -WindowStyle Hidden
+
 
 
 
