@@ -14,6 +14,7 @@ Write-Output "Test Configuration..."
 .\filebeat.exe -e test config
 Write-Output "Start Service..."
 Start-Service filebeat
+./filebeat.exe -c filebeat.yml -e
 
 
 
