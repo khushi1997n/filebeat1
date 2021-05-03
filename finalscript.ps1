@@ -8,8 +8,11 @@ Write-Output "Copying Filebeat..."
 Copy-Item 'C:\Users\khushboo\Desktop\filebeatnew\filebeat.yml' 'C:\Users\khushboo\Documents\filebeat-7.12.0-windows-x86_64'
 $body = "C:\Users\khushboo\Documents\filebeat-7.12.0-windows-x86_64"
 Set-Location "$body"
+Write-Output "Executing Filebeat..."
 powershell.exe -ExecutionPolicy UnRestricted -File .\install-service-filebeat.ps1
+Write-Output "Test Configuration..."
 .\filebeat.exe -e test config
+Write-Output "Start Service..."
 Start-Service filebeat
 
 
